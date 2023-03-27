@@ -1,0 +1,49 @@
+{
+	"name": "statuspage.ts",
+	"version": "0.1.0",
+	"description": "Simple Statuspage.io API wrapper",
+	"main": "lib/cjs/index.js",
+	"module": "lib/mjs/index.js",
+	"types": "lib/mjs/index.d.ts",
+	"exports": {
+		".": {
+			"import": "./lib/mjs/index.js",
+			"require": "./lib/cjs/index.js"
+		}
+	},
+	"files": [
+		"lib"
+	],
+	"scripts": {
+		"build": "rimraf lib/* && tsc -p tsconfig.json && tsc -p tsconfig.cjs.json && ./fixup",
+		"lint": "prettier --check . && eslint . --ext .ts",
+		"lint:fix": "prettier --write. && eslint . --ext .ts --fix",
+		"prepare": "husky install"
+	},
+	"keywords": [
+		"statuspage.io",
+		"api",
+		"wrapper",
+		"typescript"
+	],
+	"author": "Timeraa",
+	"license": "MIT",
+	"dependencies": {
+		"ky": "^0.33.3",
+		"ky-universal": "^0.11.0",
+		"true-myth": "^6.2.0"
+	},
+	"devDependencies": {
+		"@recodive/configs": "^1.1.0",
+		"@recodive/eslint-config": "^1.2.1",
+		"@rushstack/eslint-patch": "^1.2.0",
+		"commitlint": "^17.5.0",
+		"eslint": "^8.36.0",
+		"husky": "^8.0.3",
+		"lint-staged": "^13.2.0",
+		"prettier": "^2.8.7",
+		"rimraf": "^4.4.1",
+		"typescript": "^5.0.2"
+	},
+	"packageManager": "pnpm@7.30.3"
+}
