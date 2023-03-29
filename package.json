@@ -1,6 +1,6 @@
 {
 	"name": "statuspage.ts",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"description": "Simple Statuspage.io API wrapper",
 	"main": "lib/cjs/index.js",
 	"module": "lib/mjs/index.js",
@@ -14,6 +14,8 @@
 	"files": [
 		"lib"
 	],
+	"repository": "timeraa/statuspage.ts",
+	"funding": "https://github.com/timeraa/statuspage.ts?sponsor=1",
 	"scripts": {
 		"build": "rimraf lib/* && tsc -p tsconfig.json && tsc -p tsconfig.cjs.json && ./fixup",
 		"lint": "prettier --check . && eslint . --ext .ts",
@@ -45,5 +47,5 @@
 		"rimraf": "^4.4.1",
 		"typescript": "^5.0.2"
 	},
-	"packageManager": "pnpm@7.30.3"
+	"packageManager": "pnpm@8.0.0"
 }

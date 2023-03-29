@@ -1,5 +1,6 @@
 import ky from "ky-universal";
 
+import Components from "./Components.js";
 import Incidents from "./Incidents.js";
 import IncidentUpdates from "./IncidentUpdates.js";
 import Metrics from "./Metrics.js";
@@ -14,6 +15,7 @@ export default class StatuspageApi {
 	incidentUpdates = new IncidentUpdates(this);
 	metrics = new Metrics(this);
 	metricsProvider = new MetricsProvider(this);
+	components = new Components(this);
 
 	constructor(public apiKey: string) {
 		this.ky = ky.create({

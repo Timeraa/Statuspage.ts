@@ -34,13 +34,19 @@ statuspage.incidents.getAll("YOUR_PAGE_ID").then((incidents) => {
 
 These functionalities are not yet implemented. If you would like to help, please open a PR.
 
-- [ ] [Subscribers](https://developer.statuspage.io/#tag/subscribers)
-- [ ] [Templates](https://developer.statuspage.io/#tag/templates)
-- [ ] [Incident Updates](https://developer.statuspage.io/#tag/templates)
-- [ ] [Incident Subscribers](https://developer.statuspage.io/#tag/incident-subscribers)
-- [ ] [Incident Postmortem](https://developer.statuspage.io/#tag/incident-postmortem)
-- [ ] [Components](https://developer.statuspage.io/#tag/components)
-- [ ] [Component Groups](https://developer.statuspage.io/#tag/component-groups)
+- Change return types of objects to camelCase
+- Convert date strings to unix timestamps
+- [Subscribers](https://developer.statuspage.io/#tag/subscribers)
+- [Templates](https://developer.statuspage.io/#tag/templates)
+- [Incident Updates](https://developer.statuspage.io/#tag/templates)
+- [Incident Subscribers](https://developer.statuspage.io/#tag/incident-subscribers)
+- [Incident Postmortem](https://developer.statuspage.io/#tag/incident-postmortem)
+- [Components](https://developer.statuspage.io/#tag/components)
+  - [Remove Users Page Access](https://developer.statuspage.io/#operation/deletePagesPageIdComponentsComponentIdPageAccessUsers)
+  - [Add Users Page Access](https://developer.statuspage.io/#operation/postPagesPageIdComponentsComponentIdPageAccessUsers)
+  - [Add Groups Page Access](https://developer.statuspage.io/#operation/deletePagesPageIdComponentsComponentIdPageAccessGroups)
+  - [Remove Groups Page Access](https://developer.statuspage.io/#operation/postPagesPageIdComponentsComponentIdPageAccessGroups)
+- [Component Groups](https://developer.statuspage.io/#tag/component-groups)
 
 ### License
 
