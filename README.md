@@ -25,9 +25,17 @@ const Statuspage = require("statuspage.ts");
 
 const statuspage = new Statuspage("YOUR_API_KEY");
 
-statuspage.incidents.getAll("YOUR_PAGE_ID").then((incidents) => {
-	console.log(incidents);
-});
+const result = await statuspage.incidents.getAll("YOUR_PAGE_ID");
+
+// Check if the request was successful
+if (!result.ok) {
+	console.error(result.error);
+	return;
+} else {
+	console.log(result.data);
+}
+```
+
 ```
 
 ### TODO
@@ -53,3 +61,4 @@ These functionalities are not yet implemented. If you would like to help, please
 [MIT](LICENSE)
 
 **This project does is not affiliated with Statuspage.io in any way.**
+```
